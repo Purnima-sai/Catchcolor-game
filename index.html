@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Catch Game</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-section">
+            <h1>Color Catch Game</h1>
+            
+            <div class="score-display">Score: <span id="score">0</span></div>
+            
+            <div class="target-display">
+                Target Color: 
+                <span id="target-color-name">-</span>
+                <div class="target-color" id="target-color-display"></div>
+            </div>
+            
+            <div class="game-container">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div class="game-over" id="game-over">
+                    Game Over!
+                    <div style="font-size: 1.2rem; margin: 10px 0;">Your score: <span id="final-score">0</span></div>
+                    <button id="retry-btn">Try Again</button>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="start-btn">Start</button>
+                <button id="stop-btn">Stop</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>How to Play</h2>
+            <p>Use your mouse to move the basket at the bottom of the screen. Catch the falling balls that match the current target color.</p>
+            
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                <li>Each correct catch: <span style="color: #2ecc71">+10 points</span></li>
+                <li>Wrong color catch: <span style="color: #e74c3c">-5 points</span></li>
+                <li>Game stops automatically if score drops below -20</li>
+                <li>Target color changes randomly during gameplay</li>
+            </ul>
+            
+            <h2>Color Guide</h2>
+            <div class="color-examples">
+                <div class="color-sample">
+                    <div class="color-box" style="background-color: #e74c3c;"></div>
+                    <span>Red</span>
+                </div>
+                <div class="color-sample">
+                    <div class="color-box" style="background-color: #2ecc71;"></div>
+                    <span>Green</span>
+                </div>
+                <div class="color-sample">
+                    <div class="color-box" style="background-color: #f1c40f;"></div>
+                    <span>Yellow</span>
+                </div>
+                <div class="color-sample">
+                    <div class="color-box" style="background-color: #9b59b6;"></div>
+                    <span>Purple</span>
+                </div>
+                <div class="color-sample">
+                    <div class="color-box" style="background-color: #3498db;"></div>
+                    <span>Blue</span>
+                </div>
+            </div>
+            
+            <h2>Controls</h2>
+            <p><strong>Start:</strong> Begin the game</p>
+            <p><strong>Stop:</strong> Pause the game (you can resume with Start)</p>
+            <p><strong>Reset:</strong> Completely restart the game</p>
+            <p><strong>Try Again:</strong> Appears after game over to restart</p>
+        </div>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
